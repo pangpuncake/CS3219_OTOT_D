@@ -8,10 +8,11 @@ sleep 2;
 
 
 # WRITE TO TOPIC
-# docker exec -ti kafka-1
-# kafka-console-producer --bootstrap-server kafka-1:9092 --topic test
+# docker exec -ti kafka-1 /bin/kafka-console-producer --bootstrap-server kafka-1:9092 --topic test
 
 
 # READ FROM TOPIC
-# docker exec -ti kafka-1
-# kafka-console-consumer --bootstrap-server kafka-1:9092 --topic test --from-beginning
+# docker exec -ti kafka-1 /bin/kafka-console-consumer --bootstrap-server kafka-1:9092 --topic test --from-beginning
+
+# Stop leader
+# docker stop kafka-2
